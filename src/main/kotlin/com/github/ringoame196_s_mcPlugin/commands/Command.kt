@@ -18,10 +18,10 @@ class Command : CommandExecutor, TabCompleter {
         }
         val player = sender
         // 基本は所属チーム OP持ちのみどのチームでも
-        var openTeam = TeamManager.acquisitionPlayerTeam(player)
+        var openTeam = TeamManager.getPlayerTeam(player)
         if (player.isOp && args.isNotEmpty()) {
             val teamName = args[0]
-            openTeam = TeamManager.acquisitionTeam(teamName)
+            openTeam = TeamManager.getTeam(teamName)
         }
 
         if (openTeam == null) {
