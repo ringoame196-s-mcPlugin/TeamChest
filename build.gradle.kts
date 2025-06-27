@@ -33,13 +33,12 @@ dependencies {
 }
 
 configure<BukkitPluginDescription> {
-    main = "@group@.Main"
+    main = "com.github.ringoame196_s_mcPlugin.Main"
     version = pluginVersion
     apiVersion = "1." + pluginVersion.split(".")[1]
-    author = "@author@"
-    website = "@website@"
-    /*
-    コマンド追加用
+    author = "ringoame196_s_mcPlugin"
+    website = "https://github.com/ringoame196-s-mcPlugin"
+
     commands {
         register("test") {
             description = "This is a test command!"
@@ -48,7 +47,6 @@ configure<BukkitPluginDescription> {
             usage = "Just run the command!"
         }
     }
-    */
 }
 
 tasks.withType<ShadowJar> {
