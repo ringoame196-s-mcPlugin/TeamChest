@@ -5,16 +5,16 @@ import org.bukkit.entity.Player
 import org.bukkit.scoreboard.Team
 
 object TeamManager {
-	// プレイヤーの所属チーム取得
-	fun acquisitionPlayerTeam(player: Player): Team? {
-		val scoreboard = player.scoreboard
-		val teams = scoreboard.teams
-		return teams.firstOrNull { team -> team.hasEntry(player.name) }
-	}
+    // プレイヤーの所属チーム取得
+    fun acquisitionPlayerTeam(player: Player): Team? {
+        val scoreboard = player.scoreboard
+        val teams = scoreboard.teams
+        return teams.firstOrNull { team -> team.hasEntry(player.name) }
+    }
 
-	// teamName -> チーム取得
-	fun acquisitionTeam(teamName: String) :Team? {
-		val scoreboard = Bukkit.getScoreboardManager()?.mainScoreboard ?: return null
-		return scoreboard.getTeam(teamName)
-	}
+    // teamName -> チーム取得
+    fun acquisitionTeam(teamName: String): Team? {
+        val scoreboard = Bukkit.getScoreboardManager()?.mainScoreboard ?: return null
+        return scoreboard.getTeam(teamName)
+    }
 }
