@@ -1,5 +1,6 @@
 package com.github.ringoame196_s_mcPlugin.commands
 
+import com.github.ringoame196_s_mcPlugin.TeamChestManager
 import com.github.ringoame196_s_mcPlugin.TeamManager
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
@@ -28,6 +29,7 @@ class Command : CommandExecutor, TabCompleter {
             player.sendMessage(message)
             return true
         }
+        TeamChestManager.openTeamChest(player, openTeam)
 
         return true
     }
