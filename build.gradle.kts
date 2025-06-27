@@ -40,11 +40,10 @@ configure<BukkitPluginDescription> {
     website = "https://github.com/ringoame196-s-mcPlugin"
 
     commands {
-        register("test") {
-            description = "This is a test command!"
-            aliases = listOf("t")
-            permission = "testplugin.test"
-            usage = "Just run the command!"
+        register("teamchest") {
+            description = "TeamChest用コマンド"
+            aliases = listOf("tchest")
+            usage = "/teamchest (<チーム名>)"
         }
     }
 }
