@@ -64,4 +64,15 @@ object TeamChestManager {
         teamChestViewers[teamName] = view - 1
         if (view > 1) teamChestViewers[teamName] = 0
     }
+
+    fun clear(teamName: String) {
+        teamChests[teamName]?.clear()
+    }
+
+    fun clearAll() {
+        for (teamName in teamChests.keys) {
+            val teamChest = teamChests[teamName] ?: continue
+            teamChest.clear()
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package com.github.ringoame196_s_mcPlugin.commands
 
 import com.github.ringoame196_s_mcPlugin.team.TeamManager
+import com.github.ringoame196_s_mcPlugin.teamchest.TeamChestManager
 import com.github.ringoame196_s_mcPlugin.teamchest.TeamChestStorage
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
@@ -25,7 +26,7 @@ class TeamChestManageCommand : CommandExecutor, TabCompleter {
         if (args.size < 2) return false
         val teamName = args[1]
         TeamChestStorage.deleteTeamChest(teamName)
-
+        TeamChestManager.clear(teamName)
         val message = "${ChatColor.RED}${teamName}のチームチェストをクリアしました"
         sender.sendMessage(message)
 
@@ -34,6 +35,7 @@ class TeamChestManageCommand : CommandExecutor, TabCompleter {
 
     private fun clearAllCommand(sender: CommandSender): Boolean {
         TeamChestStorage.deleteAllTeamChest()
+        TeamChestManager.clearAll()
         val message = "${ChatColor.DARK_RED}${sender.name}が全てのチームチェストをクリアしました"
         for (player in Bukkit.getOnlinePlayers()) {
             if (!player.isOp) continue
