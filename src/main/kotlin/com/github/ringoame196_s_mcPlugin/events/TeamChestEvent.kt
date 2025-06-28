@@ -13,6 +13,6 @@ class TeamChestEvent : Listener {
         val inventory = e.view
 
         if (inventory.title != TeamChestManager.TEAM_CHEST_NAME) return
-        TeamChestManager.updateTeamChest(player)
+        TeamChestManager.closeTeamChest(player)
     }
 }
