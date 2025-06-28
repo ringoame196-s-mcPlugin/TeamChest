@@ -1,5 +1,8 @@
-package com.github.ringoame196_s_mcPlugin
+package com.github.ringoame196_s_mcPlugin.teamchest
 
+import com.github.ringoame196_s_mcPlugin.config.Data
+import com.github.ringoame196_s_mcPlugin.database.DBManager
+import com.github.ringoame196_s_mcPlugin.item.ItemManager
 import org.bukkit.inventory.Inventory
 
 object TeamChestStorage {

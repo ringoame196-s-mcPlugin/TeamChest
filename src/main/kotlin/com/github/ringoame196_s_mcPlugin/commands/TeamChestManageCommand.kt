@@ -1,7 +1,7 @@
 package com.github.ringoame196_s_mcPlugin.commands
 
-import com.github.ringoame196_s_mcPlugin.TeamChestStorage
-import com.github.ringoame196_s_mcPlugin.TeamManager
+import com.github.ringoame196_s_mcPlugin.team.TeamManager
+import com.github.ringoame196_s_mcPlugin.teamchest.TeamChestStorage
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command

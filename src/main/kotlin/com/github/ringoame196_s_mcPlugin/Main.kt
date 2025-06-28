@@ -2,6 +2,7 @@ package com.github.ringoame196_s_mcPlugin
 
 import com.github.ringoame196_s_mcPlugin.commands.TeamChestCommand
 import com.github.ringoame196_s_mcPlugin.commands.TeamChestManageCommand
+import com.github.ringoame196_s_mcPlugin.config.Data
 import com.github.ringoame196_s_mcPlugin.events.TeamChestEvent
 import org.bukkit.plugin.java.JavaPlugin
 

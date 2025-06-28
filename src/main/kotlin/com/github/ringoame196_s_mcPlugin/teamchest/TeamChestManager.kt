@@ -1,4 +1,4 @@
-package com.github.ringoame196_s_mcPlugin
+package com.github.ringoame196_s_mcPlugin.teamchest
 
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor

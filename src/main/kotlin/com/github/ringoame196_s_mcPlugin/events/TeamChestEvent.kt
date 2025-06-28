@@ -1,6 +1,6 @@
 package com.github.ringoame196_s_mcPlugin.events
 
-import com.github.ringoame196_s_mcPlugin.TeamChestManager
+import com.github.ringoame196_s_mcPlugin.teamchest.TeamChestManager
 import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
