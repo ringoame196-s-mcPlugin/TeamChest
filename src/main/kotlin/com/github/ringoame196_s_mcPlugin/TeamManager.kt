@@ -17,4 +17,9 @@ object TeamManager {
         val scoreboard = Bukkit.getScoreboardManager()?.mainScoreboard ?: return null
         return scoreboard.getTeam(teamName)
     }
+
+    fun getTeamNames(): MutableList<String> {
+        val scoreboard = Bukkit.getScoreboardManager()?.mainScoreboard ?: return mutableListOf()
+        return scoreboard.teams.mapNotNull { it.name }.toMutableList()
+    }
 }

@@ -1,6 +1,7 @@
 package com.github.ringoame196_s_mcPlugin.commands
 
 import com.github.ringoame196_s_mcPlugin.TeamChestStorage
+import com.github.ringoame196_s_mcPlugin.TeamManager
 import org.bukkit.Bukkit
 import org.bukkit.ChatColor
 import org.bukkit.command.Command
@@ -47,6 +48,7 @@ class TeamChestManageCommand : CommandExecutor, TabCompleter {
                 CommandConst.CLEAR_COMMAND,
                 CommandConst.CLEAR_ALL_COMMAND
             )
+            2 -> TeamManager.getTeamNames()
             else -> mutableListOf()
         }
     }
