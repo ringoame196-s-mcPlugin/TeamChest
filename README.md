@@ -1,6 +1,7 @@
 # TeamChest
 
 ## プラグイン説明
+チーム毎の共通チェストを追加する
 
 ## プラグインダウンロード
 [ダウンロードリンク](https://github.com/ringoame196-s-mcPlugin/TeamChest/releases/latest)
@@ -8,12 +9,10 @@
 ## コマンド
 | コマンド名   |     説明      | 権限 |
 | --- | ----------- | ------- |
-
-## 使い方
-
-## configファイル
-| key名   |     説明      | デフォルト値 |
-| --- | ----------- | ------- |
+| /teamchest | 自分のチームのチェストを開く | ---- |
+| /teamchest <チーム名> | 特定のチームのチームチェストを開く | op |
+| /teamchestmanage clear <チーム名> | 特定のチームのチームチェストをクリア | op |
+| /teamchestmanage clearall | 全チームのチームチェストをクリアする | op |
  
 ## 開発環境
 - Minecraft Version : 1.20.1
