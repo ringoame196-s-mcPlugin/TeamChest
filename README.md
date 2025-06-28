@@ -3,6 +3,10 @@
 ## プラグイン説明
 チーム毎の共通チェストを追加する
 
+
+https://github.com/user-attachments/assets/6607cbd0-aac6-4e79-8725-dd87657d7de9
+
+
 ## プラグインダウンロード
 [ダウンロードリンク](https://github.com/ringoame196-s-mcPlugin/TeamChest/releases/latest)
 
