@@ -1,23 +1,26 @@
 package com.github.ringoame196_s_mcPlugin
 
 import org.bukkit.inventory.ItemStack
+import org.bukkit.util.io.BukkitObjectInputStream
+import org.bukkit.util.io.BukkitObjectOutputStream
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
-import java.io.ObjectInputStream
-import java.io.ObjectOutputStream
 import java.util.Base64
 
 object ItemManager {
     fun itemStackToBase64(item: ItemStack): String {
         val outputStream = ByteArrayOutputStream()
-        ObjectOutputStream(outputStream).use { it.writeObject(item) }
+        val dataOutput = BukkitObjectOutputStream(outputStream)
+        dataOutput.writeObject(item)
+        dataOutput.close()
         return Base64.getEncoder().encodeToString(outputStream.toByteArray())
     }
 
-    fun base64ToItemStack(base64: String): ItemStack {
-        val bytes = Base64.getDecoder().decode(base64)
-        return ObjectInputStream(ByteArrayInputStream(bytes)).use {
-            it.readObject() as ItemStack
-        }
+    fun itemStackFromBase64(data: String): ItemStack {
+        val inputStream = ByteArrayInputStream(Base64.getDecoder().decode(data))
+        val dataInput = BukkitObjectInputStream(inputStream)
+        val item = dataInput.readObject() as ItemStack
+        dataInput.close()
+        return item
     }
 }
