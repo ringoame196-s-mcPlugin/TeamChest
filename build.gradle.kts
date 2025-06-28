@@ -48,6 +48,12 @@ configure<BukkitPluginDescription> {
             aliases = listOf("tchest")
             usage = "/teamchest (<チーム名>)"
         }
+        register("teamchestmanage") {
+            description = "TeamChest用管理コマンド"
+            aliases = listOf("tchestmanage")
+            permission = "op"
+            usage = "/teamchestmanage <clear,clearall> (<チーム名>)"
+        }
     }
 }
 

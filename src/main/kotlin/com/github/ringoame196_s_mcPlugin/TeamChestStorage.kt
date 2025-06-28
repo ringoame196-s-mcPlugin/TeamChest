@@ -36,6 +36,16 @@ object TeamChestStorage {
         }
     }
 
+    fun deleteTeamChest(teamName: String) {
+        val sql = "DELETE FROM $TABLE_NAME WHERE $TEAM_NAME_KEY = ?;"
+        dbManager.executeUpdate(sql, mutableListOf(teamName))
+    }
+
+    fun deleteAllTeamChest() {
+        val sql = "DELETE FROM $TABLE_NAME"
+        dbManager.executeUpdate(sql)
+    }
+
     private fun delete(teamName: String, slot: Int) {
         val sql = "DELETE FROM $TABLE_NAME WHERE $TEAM_NAME_KEY = ? AND $SLOT_KEY = ?;"
         dbManager.executeUpdate(sql, mutableListOf(teamName, slot))

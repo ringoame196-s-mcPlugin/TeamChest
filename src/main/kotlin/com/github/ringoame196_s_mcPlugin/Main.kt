@@ -1,6 +1,7 @@
 package com.github.ringoame196_s_mcPlugin
 
 import com.github.ringoame196_s_mcPlugin.commands.TeamChestCommand
+import com.github.ringoame196_s_mcPlugin.commands.TeamChestManageCommand
 import com.github.ringoame196_s_mcPlugin.events.TeamChestEvent
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -14,5 +15,7 @@ class Main : JavaPlugin() {
         server.pluginManager.registerEvents(TeamChestEvent(), plugin)
         val command = getCommand("teamchest")
         command!!.setExecutor(TeamChestCommand())
+        val manageCommand = getCommand("teamchestmanage")
+        manageCommand!!.setExecutor(TeamChestManageCommand())
     }
 }
